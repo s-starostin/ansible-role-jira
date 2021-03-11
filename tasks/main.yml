@@ -1,0 +1,15 @@
+---
+- name: Install
+  include: install.yml
+  tags:
+    - install
+
+- name: Config
+  include: config.yml
+  tags:
+    - config
+
+- name: Service
+  include: service.yml
+  tags:
+    - service

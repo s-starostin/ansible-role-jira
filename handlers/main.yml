@@ -1,0 +1,6 @@
+---
+- name: restart jira
+  systemd:
+    name: jira
+    enabled: true
+    state: restarted
