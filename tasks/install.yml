@@ -52,7 +52,7 @@
 
 - name: Download PostgreSQL JDBC
   get_url:
-    dest: "{{ jira_jdbc_postgresql_url }}"
-    url: "{{ jira_installation_dir }}/lib/"
+    url: "{{ jira_jdbc_postgresql_url }}"
+    dest: "{{ jira_installation_dir }}/lib/"
     owner: "{{ jira_user }}"
     group: "{{ jira_group }}"
