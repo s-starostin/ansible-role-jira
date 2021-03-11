@@ -30,6 +30,17 @@
   when: jira_database_configuration
   notify: restart jira
 
+- name: Template jira cluster configuration
+  template:
+    src: conf/cluster.properties.j2
+    dest: "{{ jira_home }}/cluster.properties"
+    backup: yes
+    mode: 0644
+    owner: "{{ jira_user }}"
+    group: "{{ jira_group }}"
+  when: jira_install_datacenter
+  notify: restart jira
+
 - name: Template daemon script
   template:
     src: init.d/jira.service.j2

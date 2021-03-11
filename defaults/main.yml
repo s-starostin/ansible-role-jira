@@ -18,14 +18,8 @@ jira_jvm_minimum_memory: "2500m"
 jira_jvm_maximum_memory: "4096m"
 jira_server_port: 8005
 jira_connector_port: 8080
-jira_proxy_name:
-jira_context_path:
-#jira_database_configuration: false
-# Sample jira_extra_copy_files:
-# - {src: files/your_file.properties, dest: jira_home/your_file.properties, mode: 0644}
-# Sample jira_extra_template_files:
-# - {src: templates/your_template.properties, dest: jira_home/your_template.properties, mode: 0644}
-# Sample PSQL JDBC configuration:
+jira_proxy_name: ""
+jira_context_path: ""
 jira_database_configuration: true
 jira_database_type: postgres72
 jira_database_driver_class: org.postgresql.Driver
@@ -36,6 +30,10 @@ jira_database_port: 5432
 jira_database_name: jira
 jira_database_params: "?ssl=true"
 jira_install_additional_actions: ""
+jira_install_datacenter: false
+jira_datacenter_node_id: node-1
+jira_datacenter_shared_home: /var/jira_shared_home
+
 
 # Service
 jira_service_name: jira

@@ -50,6 +50,20 @@
   tags:
     - skip_ansible_lint
 
+- name: Copying directories to shared home for data center setup
+  copy:
+    src: "{{ item }}"
+    dest: "{{ jira_datacenter_shared_home }}/"
+    owner: "{{ jira_user }}"
+  with_items:
+    - "{{ jira_home }}/data"
+    - "{{ jira_home }}/plugins"
+    - "{{ jira_home }}/logos"
+    - "{{ jira_home }}/import"
+    - "{{ jira_home }}/export"
+    - "{{ jira_home }}/caches"
+  when: jira_install_datacenter
+
 - name: Run additional actions
   become: true
   become_user: "{{ jira_user }}"
