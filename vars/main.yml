@@ -1,6 +1,7 @@
 ---
-jira_package: atlassian-jira-software-{{ jira_version }}.tar.gz
-jira_installation_url: https://www.atlassian.com/software/jira/downloads/binary/{{ jira_package }}
+jira_package: "atlassian-jira-software-{{ jira_version }}.tar.gz"
+jira_installation_url: "https://www.atlassian.com/software/jira/downloads/binary/{{ jira_package }}"
 jira_database_url: "jdbc:postgresql://{{ jira_database_host }}:{{ jira_database_port }}/{{ jira_database_name }}{{ jira_database_params }}"
 jira_database_validation_query: 'select 1'
 jira_database_validation_query_timeout: 3
+jira_jdbc_postgresql_url: "https://jdbc.postgresql.org/download/postgresql-{{ jira_jdbc_postgresql_version }}.jar"

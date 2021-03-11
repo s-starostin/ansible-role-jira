@@ -27,14 +27,16 @@ jira_context_path:
 # - {src: templates/your_template.properties, dest: jira_home/your_template.properties, mode: 0644}
 # Sample PSQL JDBC configuration:
 jira_database_configuration: true
-jira_database_type: 'postgres72'
-jira_database_driver_class: 'com.postgresql.Driver'
-jira_database_username: 'atlassian'
-jira_database_password: ''
-jira_database_host: 'localhost'
+jira_database_type: postgres72
+jira_database_driver_class: com.postgresql.Driver
+jira_database_username: atlassian
+jira_database_password: ""
+jira_database_host: localhost
 jira_database_port: 5432
-jira_database_name: 'jira'
-jira_database_params: '?ssl=true'
+jira_database_name: jira'
+jira_database_params: "?ssl=true"
+
+jira_jdbc_postgresql_version: 42.2.19
 
 # Service
 jira_service_name: jira
