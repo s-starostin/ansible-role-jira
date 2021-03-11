@@ -50,6 +50,13 @@
   tags:
     - skip_ansible_lint
 
+- name: Make sure shared home dir exists for data center setup
+  file:
+    path: "{{ jira_datacenter_shared_home }}"
+    state: directory
+    recurse: yes
+  when: jira_install_datacenter
+
 - name: Copying directories to shared home for data center setup
   copy:
     src: "{{ item }}"
