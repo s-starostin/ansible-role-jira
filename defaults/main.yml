@@ -28,7 +28,7 @@ jira_database_password: ""
 jira_database_host: localhost
 jira_database_port: 5432
 jira_database_name: jira
-jira_database_params: "?ssl=true"
+jira_database_params: "ssl=true"
 jira_install_additional_actions: ""
 jira_install_datacenter: false
 jira_datacenter_node_id: node-1

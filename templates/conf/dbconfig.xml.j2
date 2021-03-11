@@ -7,6 +7,7 @@
   <schema-name>public</schema-name>
   <jdbc-datasource>
     <url>{{ jira_database_url }}</url>
+    <connection-properties>{{ jira_database_params }}</connection-properties>
     <driver-class>{{ jira_database_driver_class }}</driver-class>
     <username>{{ jira_database_username }}</username>
     <password>{{ jira_database_password }}</password>
