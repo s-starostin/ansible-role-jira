@@ -49,3 +49,8 @@
   when: jira_downloaded.changed
   tags:
     - skip_ansible_lint
+
+- name: Run additional actions
+  remote_user: "{{ jira_user }}"
+  shell: "{{ jira_install_additional_actions }}"
+  when: jira_install_additional_actions

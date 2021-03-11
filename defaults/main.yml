@@ -35,6 +35,7 @@ jira_database_host: localhost
 jira_database_port: 5432
 jira_database_name: jira
 jira_database_params: "?ssl=true"
+jira_install_additional_actions: ""
 
 # Service
 jira_service_name: jira
