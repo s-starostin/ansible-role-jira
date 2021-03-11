@@ -62,6 +62,7 @@
     src: "{{ item }}"
     dest: "{{ jira_datacenter_shared_home }}/"
     owner: "{{ jira_user }}"
+    remote_src: true
   with_items:
     - "{{ jira_home }}/data"
     - "{{ jira_home }}/plugins"
