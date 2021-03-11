@@ -53,6 +53,9 @@
 - name: Make sure specified directories exist for data center setup
   file:
     path: "{{ item }}"
+    owner: "{{ jira_user }}"
+    group: "{{ jira_group }}"
+    mode: 0755
     state: directory
     recurse: yes
   with_items:
