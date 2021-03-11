@@ -51,6 +51,7 @@
     - skip_ansible_lint
 
 - name: Run additional actions
-  become: "{{ jira_user }}"
+  become: true
+  become_user: "{{ jira_user }}"
   shell: "{{ jira_install_additional_actions }}"
   when: jira_install_additional_actions|length > 0
