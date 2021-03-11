@@ -36,8 +36,6 @@ jira_database_port: 5432
 jira_database_name: jira'
 jira_database_params: "?ssl=true"
 
-jira_jdbc_postgresql_version: 42.2.19
-
 # Service
 jira_service_name: jira
 jira_service_state: started
