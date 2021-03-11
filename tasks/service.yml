@@ -1,5 +1,12 @@
 ---
 
+- name: Add firewalld rule for jira
+  firewalld:
+    port: "8080/tcp"
+    permanent: true
+    state: enabled
+  notify: reload firewalld
+
 - name: Configuring service
   systemd:
     name: "{{ jira_service_name }}"

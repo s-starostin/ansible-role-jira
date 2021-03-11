@@ -1,4 +1,10 @@
 ---
+- name: Ensure firewalld service reloaded
+  systemd:
+    name: firewalld
+    state: reloaded
+  listen: reload firewalld
+
 - name: restart jira
   systemd:
     name: jira
