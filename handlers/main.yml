@@ -8,5 +8,5 @@
 - name: restart jira
   systemd:
     name: jira
-    enabled: true
     state: restarted
+  when: jira_service_state != "stopped"
